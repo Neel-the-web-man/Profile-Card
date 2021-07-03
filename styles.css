@@ -1,0 +1,132 @@
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: hsl(185, 75%, 39%);
+}
+
+.top-pattern {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/bg-pattern-top.svg");
+    background-position: bottom calc(100vh/2.7) right calc(100vw/1.95), top calc(100vh/2) left calc(100vw/2.1);
+    background-repeat: no-repeat;
+}
+
+.bottom-pattern {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/bg-pattern-bottom.svg");
+    background-position: top calc(100vh/1.9) left calc(100vw/2);
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 15px;
+    margin: auto;
+    width: 360px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.pic-box {
+    height: 140px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: url("./images/bg-pattern-card.svg");
+    display: flex;
+    justify-content: center;
+}
+
+.pic {
+    background-image: url("./images/image-victor.jpg");
+    height: 100px;
+    width: 100px;
+    border: 5px solid white;
+    border-radius: 100%;
+    margin-top: 90px;
+}
+
+.intro-box {
+    height: 160px;
+    width: 100%;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    align-items: center;
+}
+
+.intro{
+    display: flex;
+}
+
+.name {
+    text-align: center;
+    padding-right: 10px;
+    font-weight: 700;
+    color: rgb(90, 90, 90);
+}
+
+.age {
+    color: hsl(0, 0%, 59%);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.country {
+    padding-top: 10px;
+    color:hsl(0, 0%, 59%);
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+}
+.followers,.likes,.photos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.followerNumber,.likesNumber,.photoNumber{
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 7px;
+}
+.followerFootName,.likesFootName,.photoFootName{
+    color: hsl(227, 10%, 46%);
+    font-size:0.75em;
+}
+@media screen and (max-width:500px){
+    .card{
+        width: 70%;
+    }
+}
+@media screen and (max-width:400px){
+    .card{
+        width: 80%;
+    }
+}
